@@ -71,10 +71,13 @@ function draw() {
 	  gameState="play";
 	  background(0);
   }
+	
+  if(gameState==="play"){	
 
     if(bg.x<450){
 	  bg.x=600;
   }
+	
 
   if(keyDown("up") && David.y>=300){
 	  David.velocityY = -12;
@@ -151,6 +154,8 @@ if(gameState==="win"){
 	text("The Treasure Is All Yours",displayWidth/2-200,displayHeight/2);
 	
 }
+}
+
 function spawnSpikes(){
 	if(frameCount%400===0){
 		spikes = createSprite(displayWidth+50,600);
